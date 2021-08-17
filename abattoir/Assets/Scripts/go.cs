@@ -36,26 +36,14 @@ public class go : MonoBehaviour {
         Time.timeScale = 0;
     }
     public void back2menu () {
-        boom.GetComponent<ParticleSystem> ().Stop ();
-        player.active = true;
-        camera1.active = false;
-        camera2.active = false;
-        camera3.active = false;
-        camera4.active = false;
-        all.GetComponent<all> ().IsGamePaused = true;
-        all.GetComponent<all> ().start = true;
-        light1.GetComponent<Light> ().intensity = 0;
-        light2.GetComponent<Light> ().intensity = 0;
-        light3.GetComponent<Light> ().intensity = 0;
-        light4.GetComponent<Light> ().intensity = 0;
-        Time.timeScale = 0;
+        Start ();
         all.GetComponent<all> ().g1.transform.position = all_g1;
         all.GetComponent<all> ().g2.transform.position = all_g2;
         all.GetComponent<all> ().g1.GetComponent<man1> ().recover ();
         all.GetComponent<all> ().g2.GetComponent<man1> ().recover ();
         GameObject.Find ("servant1").GetComponent<manc> ().recover ();
         GameObject.Find ("servant_b1").GetComponent<manc> ().recover ();
-        mode = 1;
+        mode = 0;
         a = d = true;
         b = c = false;
         all.GetComponent<all> ().dier = false;
